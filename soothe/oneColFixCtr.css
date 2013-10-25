@@ -1,0 +1,147 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFF;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	overflow: hidden;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+a img {
+	border: none;
+}
+
+.container {
+	width: 100%;
+	min-height: 2000px;
+	margin-top: 0px;
+	position: relative;
+	background: #12121D;
+}
+#bg {
+	transition: background-color 0.5s ease;
+}
+.content {
+	color: #003;
+	padding: 10px 0;
+	width: 666px;
+	text-align: right;
+	font: "Arial Black", Gadget, sans-serif;
+	position: absolute;
+	right: 20px;
+	bottom: 200px;
+}
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt { 
+	float: right;
+	margin-left: 8px;
+}
+.fltlft {
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat {
+	clear: both;
+	height: 0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.lines1 {
+	background: #0CF;
+}
+.lines2 {
+	background: #99CC33;
+	opacity: 0.3
+}
+.lines3 {
+	background: #CCCC33;
+	opacity: 0.3
+}
+.lines4 {
+	background: #CC3333;
+	opacity: 0.3
+}
+.lines5 {
+	background: #99FF33;
+	opacity: 0.3
+}
+.lines6 {
+	background: #FFFF99;
+	opacity: 0.1
+}
+.lines7 {
+	background: #0066FF;
+	opacity: 0.5
+}
+.lines {
+	width: 10%;
+	height: 20px;
+	float: left;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+#youtube {
+	width: 100%;
+	overflow: hidden!important;
+	text-align: center;
+	margin: 0px auto;
+	background: rgba(1,1,1,1);
+}
+.circles {
+	position: fixed;
+	z-index: 9999;
+	opacity: 0;
+}
+.glows {
+	width: 2px;
+	height: 2px;
+	border-radius: 1px;
+	position: fixed;
+	z-index: 9999;
+	opacity: 0.1;
+	background: #12121D;
+	-webkit-box-shadow: 250px 150px 250px 150px #E9EAFC;
+	-moz-box-shadow: 250px 150px 250px 150px #E9EAFC;
+	box-shadow: 250px 150px 250px 150px #E9EAFC;
+}
+.audiocontent {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	color:#06C;
+	font-size:12px;
+	padding:5px 10px;
+	opacity:0.2;
+	transition: all 600 ease-in-out;
+}
+
+.audiocontent:hover{opacity:0.8}
+
+.sales{
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	color:#06C;
+	font-size:12px;
+	padding:5px 10px;
+	opacity:0.2;	
+	transition: all 600 ease-in-out;
+}
+.sales:hover{opacity:0.8}
+
+a{text-decoration:none;color:#06C;}
+a:visited{text-decoration:none;color:#06C;}
+a:hover{text-decoration:underline;color:#06C;}
