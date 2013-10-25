@@ -1,0 +1,21 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+	<title>Frank's Countdown Clock</title>
+	<script type="text/javascript" src="fc_countdownclock.js"></script>
+
+	<script type="text/javascript">
+		var myTime = new Date();
+		var TargetTime = new Date(myTime);
+		
+		myTime.setMinutes(myTime.getMinutes() + 30);
+
+		window.onload = function () {
+		   startClock(myTime.toString('yyyy/mm/dd hh:mm:ss'), 'fc');
+		}
+	</script>
+</head>
+<body>
+	<div id="fc"></div>
+</body>
+</html>
