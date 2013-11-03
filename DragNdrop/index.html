@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drag 'n' Drop test</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script>
+		
+		$(function() {
+
+			for (var i = 1; i <10; i++) {
+				$('body').append('<div class="dragee box" draggable="true" ondragstart="drag(event)" id="box' + i +'"><h2>Drag me!</h2></div>')
+			};
+
+		} );
+		
+
+		var divlist = "";
+
+
+		function allowDrop(ev)
+		{
+			ev.preventDefault();
+		}
+
+		function drag(ev)
+		{
+			var dropped = document.getElementById(ev.target.id).innerHTML ;
+
+			dropped = $('#'+ev.target.id).parent().innerHTML;
+
+			ev.dataTransfer.setData("IDtext", dropped );
+			
+			ev.dataTransfer.setData('test', 'hey')
+		}
+
+		function drop(ev)
+		{
+			ev.preventDefault();
+			divlist = ev.dataTransfer.getData("IDtext") ;
+			var hey = ev.dataTransfer.getData("Test");
+
+			$("#dragTo").append(divlist);
+
+
+
+		}
+	</script>
+
+</head>
+<body>
+	
+	<div id="dragTo" class="dragto box" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<h2>Drag here</h2>
+
+	</div>
+	
+</body>
+</html>

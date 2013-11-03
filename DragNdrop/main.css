@@ -1,0 +1,35 @@
+html, body{height: 100%; width: 100%; font-family: sans-serif; padding:20px;}
+
+.box{
+	height: 100px;
+	width: 100px;
+	draggable:true;
+	margin: 10px;
+	float: left;
+	padding:10px;
+	cursor:move;
+}
+
+.box h2{
+	width: 100%;
+	height: 30px;
+	background: #333;
+	color: #fff;
+	cursor:move;
+}
+
+.dragee{
+	background: #0cf;
+	
+}
+.dragto{
+	background: #333;
+	color: #ccc;
+	width: 10%;
+	height: 80%;
+	margin: 10px 0;
+	padding:10px;
+	overflow-y:auto;
+	float: left;
+	
+}

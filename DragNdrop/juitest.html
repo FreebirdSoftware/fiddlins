@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<!doctype html>
+ 
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery UI Draggable - Visual feedback</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <style>
+    .pageItem { width: 110px; height: 90px; float: left; margin: 2px 10px 2px 10px; border: 1px solid blue; background: white; }
+    #results { display: inline-block; width: 160px; height: 800px; border: 1px solid black; overflow: auto; }
+    #page { display: inline-block; width: 650px; height: 800px; border: 1px solid black; background: #cccccc;}
+ #bounding { width: 1000px; height: 900px; border: 1px solid black;}
+    p { clear:both; margin:0; padding:1em 0; }
+    </style>
+    
+    <script>
+    $(function() {
+        $( ".pageItem" ).draggable({
+         revert: false,
+ stack: "pageItem",
+         helper: 'clone',
+     start:  function() { $(this).toggle(); }, 
+    stop:   function() { $(this).toggle(); } 
+        
+        });
+        
+        $( "#page" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                 $(ui.draggable).appendTo($(this));
+                // $( ui.draggable ).resizable();
+
+            }
+        });
+    });
+    
+
+    </script>
+    
+</head>
+<body>
+ 
+ 
+<div id="bounding">
+
+<h3 class="docs"></h3>
+<div id="results">
+    <div class="pageItem">
+        <p style="text-align: center;">Item A</p>
+    </div>
+ 
+    <div class="pageItem">
+        <p style="text-align: center;">Item B</p>
+    </div>
+ 
+    <div class="pageItem">
+        <p style="text-align: center;">Item C</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item D</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item E</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item F</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item G</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item H</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item I</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item J</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item K</p>
+    </div>
+
+    <div class="pageItem">
+        <p style="text-align: center;">Item L</p>
+    </div>
+
+    
+    
+</div>
+ 
+<div id="page">
+
+</div> 
+</div>
+ 
+</body>
+</html>
