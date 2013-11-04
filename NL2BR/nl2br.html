@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>keyup demo</title>
+ 	<style type="text/css">
+  body{
+    font-family: verdana, sans-serif;
+    text-align: center;
+    color: #333;
+  }
+	textarea{
+		width: 70%;
+    height:300px;
+		margin: 20px auto;
+	}
+
+
+ 	</style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+    <h1>Type in the top box, new lines will be converted to &ltbr&gt's.
+    <textarea id="source"></textarea>
+    <textarea id="target"></textarea>
+  
+
+<script type="text/javascript" src="/resources/events.js"></script>
+ 
+<script>
+
+$( "#source" ).keyup(function( event ) {
+	var myText = nl2br( $(this).val());
+  $( "#target" ).text(   myText  );
+});
+
+
+$( "#source" ).click(function( event ) {
+  var myText = nl2br( $(this).val());
+  $( "#target" ).text(   myText  );
+});
+ 
+$( "#target").click(function() {
+  $( "#target" ).keyup();
+});
+
+   function nl2br (str) {
+		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br>' + '$2');
+    }
+
+</script>
+ 
+</body>
+</html>
